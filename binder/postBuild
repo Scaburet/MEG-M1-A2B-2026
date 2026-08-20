@@ -1,32 +1,13 @@
 #!/bin/bash
 set -e     # to avoid errors being silently ignored
 
-#-------- Gestion du kernel bash pour les notebooks ------------
-
-# Installer le kernelspec bash dans l'environnement courant
-ENV_PREFIX="${CONDA_PREFIX:-/srv/conda/envs/notebook}"
-
-"${ENV_PREFIX}/bin/python" -m bash_kernel.install --sys-prefix
-
-# Modification of kernel.json to add the notebook environment's bin directory to PATH
-KERNEL_JSON="${ENV_PREFIX}/share/jupyter/kernels/bash/kernel.json"
-python - "${KERNEL_JSON}" "${ENV_PREFIX}" <<'PY'
-import json
-import sys
-
-kernel_json = sys.argv[1]
-env_prefix = sys.argv[2]
-
-with open(kernel_json) as f:
-    spec = json.load(f)
-
-spec.setdefault("env", {})["PATH"] = f"{env_prefix}/bin:${{PATH}}"
-spec["env"]["CONDA_PREFIX"] = env_prefix
-
-with open(kernel_json, "w") as f:
-    json.dump(spec, f, indent=2)
-    f.write("\n")
-PY
+#-------- Gestion des kernels pour les notebooks ------------
+# Modification of configuration jupyter server to add the notebook environment's bin directory to PATH
+mkdir -p ~/.jupyter
+cat > ~/.jupyter/jupyter_server_config.py <<'EOF'
+import os
+os.environ["PATH"] = "/srv/conda/envs/notebook/bin:" + os.environ["PATH"]
+EOF
 
 #-------- R kernel and packages ------------
 # Gère le kernel R pour cet environnement
@@ -48,3 +29,6 @@ R --quiet -e "IRkernel::installspec(prefix='/srv/conda/envs/notebook')" || true
 # Biostrings: Efficient manipulation of biological strings
 # https://bioconductor.org/packages/release/bioc/html/Biostrings.html
 # R -e "BiocManager::install('Biostrings')"
+# R -e "BiocManager::install('DESeq2')"
+# R -e "BiocManager::install('org.Mm.eg.db')"
+# R -e "BiocManager::install('clusterProfiler')"
