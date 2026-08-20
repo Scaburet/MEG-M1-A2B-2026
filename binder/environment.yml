@@ -35,21 +35,42 @@ dependencies:
   - pip
   - pip:
     - watermark
+    - man-db
 
-  # For the M1 A2B course:
+  # For the M1 A2B course (unix part)
   - fastqc
   - multiqc
   - fastp
   - star
+  - salmon
   - samtools
   - qualimap
-  - subread  
+  - subread
+
 
   # R environment (version for Ubuntu 24.04)
   - r-irkernel
   - r-base
 
-  # R packages
+  # R packages for the M1 A2B course:
   - r-essentials                   # inclut tidyverse                                       
-  # - r-markdown
+  - r-markdown
+  - r-rcpp
+  - r-readxl
+  - r-writexl
+  - r-openxlsx
+  - r-factominer
+  - r-dt
+  - r-swirl
+  - r-biocManager                 # Bioconductor package manager
+  - r-bioc-biocgenerics           # inclut Biostrings, for efficient manipulation of biological strings
+  - r-bioc-genomicranges
+  - r-biomart                     # inclut rsqlite
+  - r-deseq2                      # for transcriptomic analysis
+  - r-org.Mm.eg.db
+  - r-clusterprofiler
+  - r-pheatmap
+  - r-bioc-summarizedexperiment
+  - r-cran-knitr
+  - r-cran-rmarkdown
   
