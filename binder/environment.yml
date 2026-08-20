@@ -35,7 +35,7 @@ dependencies:
   - pip
   - pip:
     - watermark
-    - man-db
+    # - man-db
 
   # For the M1 A2B course (unix part)
   - fastqc
