@@ -62,16 +62,10 @@ dependencies:
   - r-openxlsx
   - r-factominer
   - r-dt
-  #- r-swirl
+  - r-corrplot
+  - r-rpart
   - r-biocManager                 # Bioconductor package manager
-  #- r-biocgenerics                # inclut Biostrings, for efficient manipulation of biological strings
-  #- r-genomicranges
-  #- r-biomart                     # inclut rsqlite
-  #- r-deseq2                      # for transcriptomic analysis
-  #- r-org.Mm.eg.db
-  #- r-clusterprofiler
   - r-pheatmap
-  #- r-summarizedexperiment
-  #- r-cran-knitr
-  #- r-cran-rmarkdown
+  #- r-knitr
+  #- r-rmarkdown
   
