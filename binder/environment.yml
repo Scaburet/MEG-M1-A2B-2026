@@ -53,7 +53,8 @@ dependencies:
   - r-base
 
   # R packages for the M1 A2B course:
-  - r-essentials                   # inclut tidyverse                                       
+  - r-essentials                  
+  - r-tidyverse                                       
   - r-markdown
   - r-rcpp
   - r-readxl
