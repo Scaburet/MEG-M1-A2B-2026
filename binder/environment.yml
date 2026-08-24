@@ -64,6 +64,7 @@ dependencies:
   - r-dt
   - r-corrplot
   - r-rpart
+  - r-rpart.plot
   - r-biocManager                 # Bioconductor package manager
   - r-pheatmap
   #- r-knitr
