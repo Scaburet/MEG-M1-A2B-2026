@@ -2,7 +2,7 @@
 set -e     # to avoid errors being silently ignored
 
 #-------- Gestion des kernels pour les notebooks ------------
-# Modification of configuration jupyter server to add the notebook environment's bin directory to PATH
+# Modification of configuration of the jupyter server to add the notebook environment's bin directory to PATH
 mkdir -p ~/.jupyter
 cat > ~/.jupyter/jupyter_server_config.py <<'EOF'
 import os
