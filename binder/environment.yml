@@ -1,4 +1,5 @@
-name: template-R-SC-2026
+name: MEG-M1-A2B-2026
+# d'après l'env `template-R-SC-2026`
 # adapté de Scaburet/template-R-SC-2026, qui est le template ok pour avoir Rstudio sur uracile après maj Plasma
 # Ajout des outils bash utilisés pour le pipeline RNAseq de l'UE A2B du M1 MEG - UPC
 # 10/07/2026
@@ -7,6 +8,7 @@ channels:
   - conda-forge
   - bioconda
   - nodefaults
+  
 dependencies:
   # Jupyter dependencies
   - jupyterhub>=4.1,<5
@@ -23,6 +25,9 @@ dependencies:
   # Jupyter archive
   # https://github.com/jupyterlab-contrib/jupyter-archive
   - jupyter-archive
+  # JupyterLab git
+  # https://github.com/jupyterlab/jupyterlab-git
+  - jupyterlab-git
 
   # Bash environment
   - bash_kernel
@@ -50,7 +55,7 @@ dependencies:
 
   # R environment (version for Ubuntu 24.04)
   - r-irkernel
-  - r-base
+  - r-base>=4
 
   # R packages for the M1 A2B course:
   - r-essentials                  
