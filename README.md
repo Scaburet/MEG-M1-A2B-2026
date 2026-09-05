@@ -1,8 +1,13 @@
-# UE A2B - TP 5 et 6
+# UE A2B - Environnement mis à jour pour 2026
 
-1ère partie du pipeline d'analyse RNAseq pour le M1 du Magistère de Génétique - Université Paris Cité
-UE A2B - TP 5 & 6 Environnement bash pour les premières étapes d'une analyse RNAseq
+M1 du Magistère de Génétique - Université Paris Cité
+UE A2B - Environnement bash et R pour toutes les étapes d'une analyse RNAseq
+-> apprentissage Unix
 -> quality check, processing, mapping de reads RNAseq paired-end
+-> apprentissage R
+-> Comptage des reads, analyse exploratoire des données RNAseq
+-> analyse différentielle et enrichissement
+-> initiation à l'usage de l'IA en biologie
 
 ## Try it on Binder
 
