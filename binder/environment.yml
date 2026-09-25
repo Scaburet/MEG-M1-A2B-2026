@@ -66,6 +66,8 @@ dependencies:
   - r-writexl
   - r-openxlsx
   - r-factominer
+  - r-factoextra
+  - r-rcolorbrewer 
   - r-dt
   - r-corrplot
   - r-rpart
